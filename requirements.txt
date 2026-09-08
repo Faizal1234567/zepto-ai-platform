@@ -84,7 +84,7 @@ imbalanced-learn>=0.13
 fastapi>=0.115
 uvicorn>=0.30
 langgraph>=0.2
-chromadb>=0.5
+chromadb>=1.5
 sentence-transformers>=3.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
