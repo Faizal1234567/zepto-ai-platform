@@ -13,4 +13,8 @@ Run it from the repository root:
 .\venv\Scripts\python.exe .\data_pipeline\pipeline.py
 ```
 
-Modules 2 and 3 are intentionally not implemented as part of the current Module 1 delivery.
+## Module 2: analytics
+
+Module 2 is in [`analytics`](analytics/README.md). Run `01_eda.py` once to load and profile Titanic, then run `02_modeling.py` to train and evaluate the models. Detailed instructions are in the module README.
+
+Module 3 is intentionally not implemented as part of the current delivery.
