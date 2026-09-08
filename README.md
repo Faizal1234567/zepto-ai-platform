@@ -17,4 +17,6 @@ Run it from the repository root:
 
 Module 2 is in [`analytics`](analytics/README.md). Run `01_eda.py` once to load and profile Titanic, then run `02_modeling.py` to train and evaluate the models. Detailed instructions are in the module README.
 
-Module 3 is intentionally not implemented as part of the current delivery.
+## Module 3: support assistant
+
+Module 3 is in [`support_assistant`](support_assistant/README.md). It provides an offline-first LangGraph and FastAPI policy assistant backed by local MiniLM embeddings and ChromaDB. Its default mock mode needs no API key or LLM-provider call.
