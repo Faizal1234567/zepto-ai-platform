@@ -147,7 +147,7 @@ SELECT b.title, c.category_name AS category, b.rating, b.price_gbp, b.price_inr,
 
 ## pandas read_sql and merge verification
 
-The JOIN result was read with `pd.read_sql_query`; the five-most-expensive query was also read with pandas. The in-memory `pd.merge` reproduction matches the SQL JOIN: **True**.
+The JOIN result was read with `pd.read_sql`; the five-most-expensive query was also read with pandas. The in-memory `pd.merge` reproduction matches the SQL JOIN: **True**.
 
 ### JOIN result read with pandas
 

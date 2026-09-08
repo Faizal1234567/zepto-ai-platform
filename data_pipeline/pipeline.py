@@ -238,9 +238,10 @@ def dataframe_markdown(frame: pd.DataFrame) -> str:
 def save_query_evidence(database_path: Path) -> tuple[bool, dict[str, int]]:
     """Execute required SQL, save printed output, and prove pandas merge matches JOIN."""
     with sqlite3.connect(database_path) as connection:
-        results = {name: pd.read_sql_query(sql, connection) for name, sql in QUERIES.items()}
-        books_df = pd.read_sql_query("SELECT * FROM books", connection)
-        categories_df = pd.read_sql_query("SELECT * FROM categories", connection)
+        # Use pandas.read_sql exactly as required, for every stored SQL result.
+        results = {name: pd.read_sql(sql, connection) for name, sql in QUERIES.items()}
+        books_df = pd.read_sql("SELECT * FROM books", connection)
+        categories_df = pd.read_sql("SELECT * FROM categories", connection)
 
     join_sql = results["6. JOIN (ten highest-rated books with category)"]
     join_merge = (
@@ -264,7 +265,7 @@ def save_query_evidence(database_path: Path) -> tuple[bool, dict[str, int]]:
     sections.extend(
         [
             "## pandas read_sql and merge verification\n",
-            "The JOIN result was read with `pd.read_sql_query`; the five-most-expensive query was also read with pandas. "
+            "The JOIN result was read with `pd.read_sql`; the five-most-expensive query was also read with pandas. "
             f"The in-memory `pd.merge` reproduction matches the SQL JOIN: **{join_matches_merge}**.\n",
             "### JOIN result read with pandas\n",
             dataframe_markdown(join_sql),

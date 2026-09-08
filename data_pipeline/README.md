@@ -47,4 +47,4 @@ books
   category_id  INTEGER FOREIGN KEY → categories.category_id
 ```
 
-The generated query evidence includes SELECT/WHERE, ORDER BY, LIMIT, DISTINCT, BETWEEN, IN, and a categories/books JOIN. It reads SQL results back with `pd.read_sql_query` and independently recreates the JOIN with `pd.merge`, then records whether the two DataFrames are identical.
+The generated query evidence includes SELECT/WHERE, ORDER BY, LIMIT, DISTINCT, BETWEEN, IN, and a categories/books JOIN. It reads SQL results back with `pd.read_sql` and independently recreates the JOIN with `pd.merge`, then records whether the two DataFrames are identical.
