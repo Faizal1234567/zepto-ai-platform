@@ -1,0 +1,21 @@
+{
+  "books_scraped": 69,
+  "books_loaded": 69,
+  "categories": [
+    "Historical Fiction",
+    "Mystery",
+    "Travel"
+  ],
+  "currency_conversion": {
+    "gbp_to_inr": 105.5
+  },
+  "join_matches_pandas_merge": true,
+  "query_result_row_counts": {
+    "1. SELECT + WHERE (in-stock books rated four or five)": 10,
+    "2. ORDER BY + LIMIT (five most expensive books)": 5,
+    "3. DISTINCT (categories represented)": 3,
+    "4. BETWEEN (mid-priced books)": 20,
+    "5. IN (selected ratings)": 15,
+    "6. JOIN (ten highest-rated books with category)": 10
+  }
+}
