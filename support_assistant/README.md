@@ -29,7 +29,7 @@ These demonstrate both LangGraph routes with `MOCK_LLM` unset/default. Exact wor
 
 ```json
 POST /ask {"query":"What is the delivery fee for an order below INR 149?"}
-{"answer":"Based on the retrieved context: Zepto delivers grocery and household essentials to serviceable pin codes within 10 to 30 minutes of order confirmation, depending on the customer's delivery zone and current order volume. Standard delivery is free on orders over INR 149; orders below this threshold incur a flat INR 25 delivery fee.","sources":["doc_01","doc_03","doc_04"],"confidence":1.0}
+{"answer":"Based on the retrieved context: Zepto delivers grocery and household essentials to serviceable pin codes within 10 to 30 minutes of order confirmation, depending on the customer's delivery zone and current order volume. Standard del","sources":["doc_01","doc_05","doc_07"],"confidence":1.0}
 ```
 
 ```json

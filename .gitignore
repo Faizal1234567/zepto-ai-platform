@@ -203,6 +203,10 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Locally regenerated support-assistant vector store and installation logs
+support_assistant/chroma_db/
+support_assistant/*.log
+
 # Ruff stuff:
 .ruff_cache/
 
