@@ -73,7 +73,7 @@ Mock policy answers receive the top three chunk IDs and confidence `1.0`; mock g
 
 ## Docker
 
-Build from the repository root so the Dockerfile can copy the consolidated requirements file:
+Build from the repository root. The image uses `support_assistant/requirements.txt`, a compact Module 3 runtime dependency list, while the root `requirements.txt` remains the consolidated development environment list.
 
 ```powershell
 docker build -f .\support_assistant\Dockerfile -t zepto-support-assistant .

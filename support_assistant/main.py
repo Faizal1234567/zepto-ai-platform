@@ -137,12 +137,12 @@ def real_response(query: str, context: str, sources: list[str]) -> AskResponse:
 
 
 def classify_intent(state: AssistantState) -> AssistantState:
-    query = state["query"]
-    if mock_mode():
-        intent: Literal["policy_question", "general_question"] = "policy_question" if any(keyword in query.lower() for keyword in POLICY_KEYWORDS) else "general_question"
-    else:
-        raw = groq_text(f"Classify this as exactly policy_question or general_question: {query}").strip().lower()
-        intent = "policy_question" if "policy_question" in raw else "general_question"
+    query = state["query"].lower()
+    intent: Literal["policy_question", "general_question"] = (
+        "policy_question"
+        if any(keyword in query for keyword in POLICY_KEYWORDS)
+        else "general_question"
+    )
     return {"intent": intent}
 
 
